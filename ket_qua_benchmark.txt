@@ -1,0 +1,335 @@
+################ CHIẾN LƯỢC: heading (có filter, bảng đã chuẩn hóa)
+Chiến lược: heading | Embedder: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Filter: BẬT
+Đã nạp 82 chunk từ 7 tài liệu
+
+=== Q1: Học phí toàn bộ chương trình cử nhân Kinh doanh năm 2026 là bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: 1.127.520.000 VND (288 tín chỉ, 24 môn) — chinh-sach-hoc-phi-rmit, Khoa Kinh doanh
+  1. score=0.691 doc_id=chinh-sach-hoc-phi-dac-biet#12
+     ## Chứng chỉ sau đại học  Học viên mới của các chương trình Chứng chỉ sau đại học nhập học vào Học kỳ 2 hoặc 3...
+  2. score=0.678 doc_id=chinh-sach-hoc-phi-dac-biet#8
+     ## Thạc sĩ Quản trị kinh doanh (MBA) Học viên mới của chương trình Thạc sĩ Quản trị kinh doanh (MBA) nhập học ...
+  3. score=0.655 doc_id=chinh-sach-hoc-phi-rmit#3  <-- chứa đáp án
+     ### Khoa Kinh doanh Chương trình: Kinh doanh, Phạm vi: Mỗi năm, Tín chỉ: 96, Số môn: 8, Phí VND: 375.840.000, ...
+  => điểm Q1: 1/2
+
+=== Q2: Sinh viên có anh chị em ruột đang học tại RMIT có được giảm học phí không?  (filter=None)
+    GOLD: Có: được chiết khấu 5% học phí khi bắt đầu nhập học trong năm 2026 (không kết hợp được với các chính sách học phí đặc biệt khác) — chinh-sach-hoc-phi-dac-biet
+  1. score=0.719 doc_id=chinh-sach-hoc-phi-dac-biet#3
+     ## Sinh viên có anh chị em ruột, vợ chồng, cha mẹ hoặc con đang học hoặc đã tốt nghiệp tại RMIT Việt Nam Nếu a...
+  2. score=0.695 doc_id=chinh-sach-hoc-phi-dac-biet#2  <-- chứa đáp án
+     ## Sinh viên có anh chị em ruột, vợ chồng, cha mẹ hoặc con đang học hoặc đã tốt nghiệp tại RMIT Việt Nam Đối v...
+  3. score=0.636 doc_id=chinh-sach-hoc-phi-dac-biet#4
+     ## Cựu sinh viên đã tốt nghiệp chương trình cử nhân hoặc thạc sĩ tại RMIT  Dành cho cựu sinh viên tốt nghiệp c...
+  => điểm Q2: 1/2
+
+=== Q3: Các bước nộp hồ sơ xin học bổng RMIT là gì?  (filter={'category': 'scholarship'})
+    GOLD: 4 bước: chọn học bổng phù hợp, kiểm tra điều kiện, chuẩn bị hồ sơ, nộp hồ sơ — hoc-bong-rmit-vietnam
+  1. score=0.655 doc_id=hoc-bong-rmit-vietnam#5  <-- chứa đáp án
+     ## Các bước nộp hồ sơ xin học bổng  Trước khi nộp hồ sơ, các bạn nên đọc Điều khoản và Điều kiện học bổng.  1....
+  2. score=0.608 doc_id=hoc-bong-rmit-vietnam#2
+     ## Học bổng sau đại học...
+  3. score=0.603 doc_id=hoc-bong-rmit-vietnam#1
+     ## Học bổng đại học...
+  => điểm Q3: 2/2
+
+=== Q4: Những khoản phí phụ thu bắt buộc gồm những gì và mức phí bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: Bảo hiểm y tế dành cho sinh viên quốc tế: 7.400.000 VND/học kỳ; Bảo hiểm y tế bắt buộc: 683.100 VND/năm, áp dụng từ học kỳ 2 năm 2026 — chinh-sach-hoc-phi-rmit, mục Phí phụ thu bắt buộc
+  1. score=0.498 doc_id=chinh-sach-hoc-phi-rmit#16  <-- chứa đáp án
+     ## Phí phụ thu bắt buộc  Dịch vụ: Bảo hiểm y tế dành cho sinh viên quốc tế, Phí VND: 7.400.000/học kỳ, Phí USD...
+  2. score=0.496 doc_id=chinh-sach-hoc-phi-rmit#4
+     ### Khoa Kinh doanh Chương trình: Quản trị Du lịch và Khách sạn, Phạm vi: Toàn chương trình, Tín chỉ: 288, Số ...
+  3. score=0.490 doc_id=chinh-sach-hoc-phi-dac-biet#0
+     # Chính sách học phí đặc biệt  Chính sách học phí đặc biệt có thể áp dụng cho học phí năm 2025....
+  => điểm Q4: 2/2
+
+=== Q5: Có dịch vụ chăm sóc sức khỏe và tâm lý không?  (filter={'audience': 'student'})
+    GOLD: Mục Chăm sóc Sức khỏe và Tâm lý: "Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những ngày đầu cho đến khi tốt nghiệp." — ho-tro-sinh-vien-rmit
+  1. score=0.542 doc_id=ho-tro-sinh-vien-rmit#2  <-- chứa đáp án
+     ## Chăm sóc Sức khỏe và Tâm lý  Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những...
+  2. score=0.358 doc_id=chinh-sach-hoc-phi-rmit#16
+     ## Phí phụ thu bắt buộc  Dịch vụ: Bảo hiểm y tế dành cho sinh viên quốc tế, Phí VND: 7.400.000/học kỳ, Phí USD...
+  3. score=0.330 doc_id=chinh-sach-hoc-phi-rmit#10
+     ### Khoa Khoa học, Kỹ thuật và Công nghệ Chương trình: Tâm lý học, Phạm vi: Mỗi năm, Tín chỉ: 96, Số môn: 8, P...
+  => điểm Q5: 2/2
+
+TỔNG: 8/10 | có chunk chứa đáp án trong top-3: 5/5
+
+################ CHIẾN LƯỢC: recursive (có filter, bảng đã chuẩn hóa)
+Chiến lược: recursive | Embedder: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Filter: BẬT
+Đã nạp 131 chunk từ 7 tài liệu
+
+=== Q1: Học phí toàn bộ chương trình cử nhân Kinh doanh năm 2026 là bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: 1.127.520.000 VND (288 tín chỉ, 24 môn) — chinh-sach-hoc-phi-rmit, Khoa Kinh doanh
+  1. score=0.751 doc_id=chinh-sach-hoc-phi-dac-biet#18
+     Chi tiết đầy đủ có trong Tài liệu hướng dẫn thông tin học phí và các phí phụ thu 2026. ## Thạc sĩ Quản trị kin...
+  2. score=0.717 doc_id=chinh-sach-hoc-phi-dac-biet#35
+     Chi tiết đầy đủ có trong Tài liệu hướng dẫn thông tin học phí và các phí phụ thu 2026. ## Thạc sĩ Kinh doanh q...
+  3. score=0.707 doc_id=chinh-sach-hoc-phi-dac-biet#21
+     Học viên mới của chương trình Chứng chỉ sau đại học - Quản trị kinh doanh nhập học vào Học kỳ 2 hoặc 3 năm 202...
+  => điểm Q1: 0/2
+
+=== Q2: Sinh viên có anh chị em ruột đang học tại RMIT có được giảm học phí không?  (filter=None)
+    GOLD: Có: được chiết khấu 5% học phí khi bắt đầu nhập học trong năm 2026 (không kết hợp được với các chính sách học phí đặc biệt khác) — chinh-sach-hoc-phi-dac-biet
+  1. score=0.733 doc_id=chinh-sach-hoc-phi-dac-biet#3
+     Nếu anh chị em ruột, vợ chồng, cha mẹ hoặc con của sinh viên đã hoàn thành chương trình học tại RMIT Việt Nam,...
+  2. score=0.703 doc_id=chinh-sach-hoc-phi-dac-biet#4
+     Nếu anh chị em ruột, vợ chồng, cha mẹ hoặc con của sinh viên hiện đang học hoặc đã từng học nhưng chưa hoàn th...
+  3. score=0.693 doc_id=chinh-sach-hoc-phi-dac-biet#2  <-- chứa đáp án
+     Sinh viên có anh chị em ruột, vợ chồng, cha mẹ hoặc con đang học hoặc đã tốt nghiệp tại RMIT Việt Nam được chi...
+  => điểm Q2: 1/2
+
+=== Q3: Các bước nộp hồ sơ xin học bổng RMIT là gì?  (filter={'category': 'scholarship'})
+    GOLD: 4 bước: chọn học bổng phù hợp, kiểm tra điều kiện, chuẩn bị hồ sơ, nộp hồ sơ — hoc-bong-rmit-vietnam
+  1. score=0.656 doc_id=hoc-bong-rmit-vietnam#5
+     Quy trình xét hồ sơ học bổng rất cạnh tranh vì số lượng học bổng hạn chế so với số lượng hồ sơ nộp. Do vậy, kh...
+  2. score=0.650 doc_id=hoc-bong-rmit-vietnam#4  <-- chứa đáp án
+     1. Chọn học bổng phù hợp 2. Kiểm tra điều kiện nộp học bổng 3. Chuẩn bị hồ sơ 4. Nộp hồ sơ Mỗi học bổng đều có...
+  3. score=0.627 doc_id=hoc-bong-rmit-vietnam#3
+     Nếu bạn là sinh viên hiện đang học tại RMIT Việt Nam với điểm trung bình cao, chúng tôi có những suất học bổng...
+  => điểm Q3: 1/2
+
+=== Q4: Những khoản phí phụ thu bắt buộc gồm những gì và mức phí bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: Bảo hiểm y tế dành cho sinh viên quốc tế: 7.400.000 VND/học kỳ; Bảo hiểm y tế bắt buộc: 683.100 VND/năm, áp dụng từ học kỳ 2 năm 2026 — chinh-sach-hoc-phi-rmit, mục Phí phụ thu bắt buộc
+  1. score=0.645 doc_id=chinh-sach-hoc-phi-dac-biet#41
+     Chi tiết đầy đủ có trong Tài liệu hướng dẫn thông tin học phí và các phí phụ thu 2026. ## Lưu ý...
+  2. score=0.579 doc_id=chinh-sach-hoc-phi-dac-biet#28
+     Thông tin chi tiết có tại Tài liệu hướng dẫn thông tin học phí và phí phụ thu dành cho sinh viên 2026. ## Chứn...
+  3. score=0.577 doc_id=chinh-sach-hoc-phi-rmit#23
+     Chương trình: Hàng không, Phạm vi: Toàn chương trình, Tín chỉ: 288, Số môn: 24, Phí VND: 1.127.520.000, Phí US...
+  => điểm Q4: 0/2
+
+=== Q5: Có dịch vụ chăm sóc sức khỏe và tâm lý không?  (filter={'audience': 'student'})
+    GOLD: Mục Chăm sóc Sức khỏe và Tâm lý: "Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những ngày đầu cho đến khi tốt nghiệp." — ho-tro-sinh-vien-rmit
+  1. score=0.470 doc_id=chinh-sach-hoc-phi-rmit#32
+     Bảo hiểm y tế bắt buộc được RMIT thu hộ Văn phòng Bảo hiểm xã hội của thành phố nơi cơ sở trường trực thuộc.  ...
+  2. score=0.341 doc_id=ho-tro-sinh-vien-rmit#1  <-- chứa đáp án
+     Student Connect cung cấp các cách đơn giản để sinh viên tiếp cận dịch vụ hỗ trợ tại RMIT Việt Nam.  ## Chăm só...
+  3. score=0.338 doc_id=chinh-sach-hoc-phi-rmit#31
+     ## Phí phụ thu bắt buộc  Dịch vụ: Bảo hiểm y tế dành cho sinh viên quốc tế, Phí VND: 7.400.000/học kỳ, Phí USD...
+  => điểm Q5: 1/2
+
+TỔNG: 3/10 | có chunk chứa đáp án trong top-3: 3/5
+
+################ CHIẾN LƯỢC: fixed (có filter, bảng đã chuẩn hóa)
+Chiến lược: fixed | Embedder: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Filter: BẬT
+Đã nạp 93 chunk từ 7 tài liệu
+
+=== Q1: Học phí toàn bộ chương trình cử nhân Kinh doanh năm 2026 là bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: 1.127.520.000 VND (288 tín chỉ, 24 môn) — chinh-sach-hoc-phi-rmit, Khoa Kinh doanh
+  1. score=0.762 doc_id=chinh-sach-hoc-phi-dac-biet#12
+     ệu hướng dẫn thông tin học phí và các phí phụ thu 2026. ## Thạc sĩ Quản trị kinh doanh (MBA)  Học viên mới của...
+  2. score=0.727 doc_id=chinh-sach-hoc-phi-dac-biet#18
+     tin chi tiết có tại Tài liệu hướng dẫn thông tin học phí và phí phụ thu dành cho sinh viên 2026. ## Chứng chỉ ...
+  3. score=0.726 doc_id=chinh-sach-hoc-phi-dac-biet#24
+     hoặc 3 năm 2026 (Kỳ nhập học Tháng 06/tháng 07 hoặc Tháng 10) và chuyển tiếp lên một trong hai chương trình th...
+  => điểm Q1: 0/2
+
+=== Q2: Sinh viên có anh chị em ruột đang học tại RMIT có được giảm học phí không?  (filter=None)
+    GOLD: Có: được chiết khấu 5% học phí khi bắt đầu nhập học trong năm 2026 (không kết hợp được với các chính sách học phí đặc biệt khác) — chinh-sach-hoc-phi-dac-biet
+  1. score=0.747 doc_id=chinh-sach-hoc-phi-dac-biet#2
+     êu trên không thể kết hợp với nhau. Nếu anh chị em ruột, vợ chồng, cha mẹ hoặc con của sinh viên đã hoàn thành...
+  2. score=0.694 doc_id=chinh-sach-hoc-phi-dac-biet#3
+      học nhưng chưa hoàn thành chương trình học, sinh viên sẽ được chiết khấu học phí cho số môn (hoặc khóa học) t...
+  3. score=0.683 doc_id=chinh-sach-hoc-phi-dac-biet#1  <-- chứa đáp án
+     ng trình Dự bị đại học, chương trình cử nhân và chương trình sau đại học  Sinh viên có anh chị em ruột, vợ chồ...
+  => điểm Q2: 1/2
+
+=== Q3: Các bước nộp hồ sơ xin học bổng RMIT là gì?  (filter={'category': 'scholarship'})
+    GOLD: 4 bước: chọn học bổng phù hợp, kiểm tra điều kiện, chuẩn bị hồ sơ, nộp hồ sơ — hoc-bong-rmit-vietnam
+  1. score=0.710 doc_id=hoc-bong-rmit-vietnam#4
+     ác học bổng khi cần thiết. Quy trình xét hồ sơ học bổng rất cạnh tranh vì số lượng học bổng hạn chế so với số ...
+  2. score=0.665 doc_id=hoc-bong-rmit-vietnam#3  <-- chứa đáp án
+     iều khoản và Điều kiện học bổng.  1. Chọn học bổng phù hợp 2. Kiểm tra điều kiện nộp học bổng 3. Chuẩn bị hồ s...
+  3. score=0.634 doc_id=hoc-bong-rmit-vietnam#2
+     đang theo học tại RMIT ## Học bổng cho sinh viên hiện tại  Nếu bạn là sinh viên hiện đang học tại RMIT Việt Na...
+  => điểm Q3: 1/2
+
+=== Q4: Những khoản phí phụ thu bắt buộc gồm những gì và mức phí bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: Bảo hiểm y tế dành cho sinh viên quốc tế: 7.400.000 VND/học kỳ; Bảo hiểm y tế bắt buộc: 683.100 VND/năm, áp dụng từ học kỳ 2 năm 2026 — chinh-sach-hoc-phi-rmit, mục Phí phụ thu bắt buộc
+  1. score=0.597 doc_id=chinh-sach-hoc-phi-dac-biet#27
+      khoản và điều kiện được nêu trong Tài liệu hướng dẫn thông tin học phí và phí phụ thu dành cho sinh viên. Dow...
+  2. score=0.548 doc_id=chinh-sach-hoc-phi-rmit#17
+      lý học, Phạm vi: Toàn chương trình, Tín chỉ: 288, Số môn: 24, Phí VND: 1.127.520.000, Phí USD tham khảo: 43.0...
+  3. score=0.547 doc_id=chinh-sach-hoc-phi-rmit#13
+     ính, Phạm vi: Mỗi năm, Tín chỉ: 96, Số môn: 8, Phí VND: 375.840.000, Phí USD tham khảo: 14.345. Chương trình: ...
+  => điểm Q4: 0/2
+
+=== Q5: Có dịch vụ chăm sóc sức khỏe và tâm lý không?  (filter={'audience': 'student'})
+    GOLD: Mục Chăm sóc Sức khỏe và Tâm lý: "Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những ngày đầu cho đến khi tốt nghiệp." — ho-tro-sinh-vien-rmit
+  1. score=0.431 doc_id=ho-tro-sinh-vien-rmit#1  <-- chứa đáp án
+     các cách đơn giản để sinh viên tiếp cận dịch vụ hỗ trợ tại RMIT Việt Nam.  ## Chăm sóc Sức khỏe và Tâm lý  Dịc...
+  2. score=0.374 doc_id=chinh-sach-hoc-phi-rmit#24
+     ế, Phí VND: 7.400.000/học kỳ, Phí USD tham khảo: 285/học kỳ. Dịch vụ: Bảo hiểm y tế bắt buộc, Phí VND: 683.100...
+  3. score=0.311 doc_id=ho-tro-sinh-vien-rmit#3
+     m Sài Gòn và Hà Nội).  ## RMIT hỗ trợ và định hướng nghề nghiệp  Có rất nhiều hoạt động và dịch vụ hỗ trợ bạn ...
+  => điểm Q5: 2/2
+
+TỔNG: 4/10 | có chunk chứa đáp án trong top-3: 3/5
+
+################ CHIẾN LƯỢC: sentence (có filter, bảng đã chuẩn hóa)
+Chiến lược: sentence | Embedder: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Filter: BẬT
+Đã nạp 60 chunk từ 7 tài liệu
+
+=== Q1: Học phí toàn bộ chương trình cử nhân Kinh doanh năm 2026 là bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: 1.127.520.000 VND (288 tín chỉ, 24 môn) — chinh-sach-hoc-phi-rmit, Khoa Kinh doanh
+  1. score=0.753 doc_id=chinh-sach-hoc-phi-dac-biet#5
+     Chi tiết đầy đủ có trong Tài liệu hướng dẫn thông tin học phí và các phí phụ thu 2026. ## Thạc sĩ Quản trị kin...
+  2. score=0.746 doc_id=chinh-sach-hoc-phi-rmit#14
+     Học phí mỗi năm là mức tham khảo dựa trên khối lượng học tập trung bình của sinh viên. ## Chương trình sau đại...
+  3. score=0.723 doc_id=chinh-sach-hoc-phi-dac-biet#8
+     Sinh viên phải bắt đầu chương trình học vào năm 2026 hoặc 2027 Học bổng được áp dụng sau khi chiết khấu học ph...
+  => điểm Q1: 0/2
+
+=== Q2: Sinh viên có anh chị em ruột đang học tại RMIT có được giảm học phí không?  (filter=None)
+    GOLD: Có: được chiết khấu 5% học phí khi bắt đầu nhập học trong năm 2026 (không kết hợp được với các chính sách học phí đặc biệt khác) — chinh-sach-hoc-phi-dac-biet
+  1. score=0.758 doc_id=chinh-sach-hoc-phi-dac-biet#1
+     Nếu anh chị em ruột, vợ chồng, cha mẹ hoặc con của sinh viên đã hoàn thành chương trình học tại RMIT Việt Nam,...
+  2. score=0.636 doc_id=chinh-sach-hoc-phi-dac-biet#2
+     ## Cựu sinh viên đã tốt nghiệp chương trình cử nhân hoặc thạc sĩ tại RMIT  Dành cho cựu sinh viên tốt nghiệp c...
+  3. score=0.635 doc_id=chinh-sach-hoc-phi-dac-biet#9
+     Lưu ý: Áp dụng cho mức học phí của chương trình Chứng chỉ sau đại học Không áp dụng cho học viên hiện tại chuy...
+  => điểm Q2: 0/2
+
+=== Q3: Các bước nộp hồ sơ xin học bổng RMIT là gì?  (filter={'category': 'scholarship'})
+    GOLD: 4 bước: chọn học bổng phù hợp, kiểm tra điều kiện, chuẩn bị hồ sơ, nộp hồ sơ — hoc-bong-rmit-vietnam
+  1. score=0.693 doc_id=hoc-bong-rmit-vietnam#4
+     Quy trình xét hồ sơ học bổng rất cạnh tranh vì số lượng học bổng hạn chế so với số lượng hồ sơ nộp. Do vậy, kh...
+  2. score=0.669 doc_id=hoc-bong-rmit-vietnam#3
+     Chuẩn bị hồ sơ 4. Nộp hồ sơ Mỗi học bổng đều có những điều kiện khác nhau, các bạn vui lòng xem thông tin cụ t...
+  3. score=0.610 doc_id=hoc-bong-rmit-vietnam#2
+     1. Chọn học bổng phù hợp 2. Kiểm tra điều kiện nộp học bổng 3....
+  => điểm Q3: 0/2
+
+=== Q4: Những khoản phí phụ thu bắt buộc gồm những gì và mức phí bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: Bảo hiểm y tế dành cho sinh viên quốc tế: 7.400.000 VND/học kỳ; Bảo hiểm y tế bắt buộc: 683.100 VND/năm, áp dụng từ học kỳ 2 năm 2026 — chinh-sach-hoc-phi-rmit, mục Phí phụ thu bắt buộc
+  1. score=0.586 doc_id=chinh-sach-hoc-phi-rmit#5
+     Chương trình: Quốc tế học, Phạm vi: Toàn chương trình, Tín chỉ: 288, Số môn: 24, Phí VND: 1.127.520.000, Phí U...
+  2. score=0.572 doc_id=chinh-sach-hoc-phi-rmit#13
+     Chương trình: Hàng không, Phạm vi: Toàn chương trình, Tín chỉ: 288, Số môn: 24, Phí VND: 1.127.520.000, Phí US...
+  3. score=0.570 doc_id=chinh-sach-hoc-phi-dac-biet#14
+     Học bổng được áp dụng sau khi chiết khấu học phí. Chính sách học phí đặc biệt phải tuân theo các điều khoản và...
+  => điểm Q4: 0/2
+
+=== Q5: Có dịch vụ chăm sóc sức khỏe và tâm lý không?  (filter={'audience': 'student'})
+    GOLD: Mục Chăm sóc Sức khỏe và Tâm lý: "Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những ngày đầu cho đến khi tốt nghiệp." — ho-tro-sinh-vien-rmit
+  1. score=0.413 doc_id=ho-tro-sinh-vien-rmit#1  <-- chứa đáp án
+     ## Chăm sóc Sức khỏe và Tâm lý  Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những...
+  2. score=0.354 doc_id=chinh-sach-hoc-phi-rmit#12
+     Chương trình: Tâm lý học, Phạm vi: Mỗi năm, Tín chỉ: 96, Số môn: 8, Phí VND: 375.840.000, Phí USD tham khảo: 1...
+  3. score=0.325 doc_id=chinh-sach-hoc-phi-rmit#18
+     Bảo hiểm y tế bắt buộc được RMIT thu hộ Văn phòng Bảo hiểm xã hội của thành phố nơi cơ sở trường trực thuộc. #...
+  => điểm Q5: 2/2
+
+TỔNG: 2/10 | có chunk chứa đáp án trong top-3: 1/5
+
+################ A/B: heading, BỎ filter
+Chiến lược: heading | Embedder: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Filter: TẮT
+Đã nạp 82 chunk từ 7 tài liệu
+
+=== Q1: Học phí toàn bộ chương trình cử nhân Kinh doanh năm 2026 là bao nhiêu?  (filter=None)
+    GOLD: 1.127.520.000 VND (288 tín chỉ, 24 môn) — chinh-sach-hoc-phi-rmit, Khoa Kinh doanh
+  1. score=0.691 doc_id=chinh-sach-hoc-phi-dac-biet#12
+     ## Chứng chỉ sau đại học  Học viên mới của các chương trình Chứng chỉ sau đại học nhập học vào Học kỳ 2 hoặc 3...
+  2. score=0.678 doc_id=chinh-sach-hoc-phi-dac-biet#8
+     ## Thạc sĩ Quản trị kinh doanh (MBA) Học viên mới của chương trình Thạc sĩ Quản trị kinh doanh (MBA) nhập học ...
+  3. score=0.655 doc_id=chinh-sach-hoc-phi-rmit#3  <-- chứa đáp án
+     ### Khoa Kinh doanh Chương trình: Kinh doanh, Phạm vi: Mỗi năm, Tín chỉ: 96, Số môn: 8, Phí VND: 375.840.000, ...
+  => điểm Q1: 1/2
+
+=== Q2: Sinh viên có anh chị em ruột đang học tại RMIT có được giảm học phí không?  (filter=None)
+    GOLD: Có: được chiết khấu 5% học phí khi bắt đầu nhập học trong năm 2026 (không kết hợp được với các chính sách học phí đặc biệt khác) — chinh-sach-hoc-phi-dac-biet
+  1. score=0.719 doc_id=chinh-sach-hoc-phi-dac-biet#3
+     ## Sinh viên có anh chị em ruột, vợ chồng, cha mẹ hoặc con đang học hoặc đã tốt nghiệp tại RMIT Việt Nam Nếu a...
+  2. score=0.695 doc_id=chinh-sach-hoc-phi-dac-biet#2  <-- chứa đáp án
+     ## Sinh viên có anh chị em ruột, vợ chồng, cha mẹ hoặc con đang học hoặc đã tốt nghiệp tại RMIT Việt Nam Đối v...
+  3. score=0.636 doc_id=chinh-sach-hoc-phi-dac-biet#4
+     ## Cựu sinh viên đã tốt nghiệp chương trình cử nhân hoặc thạc sĩ tại RMIT  Dành cho cựu sinh viên tốt nghiệp c...
+  => điểm Q2: 1/2
+
+=== Q3: Các bước nộp hồ sơ xin học bổng RMIT là gì?  (filter=None)
+    GOLD: 4 bước: chọn học bổng phù hợp, kiểm tra điều kiện, chuẩn bị hồ sơ, nộp hồ sơ — hoc-bong-rmit-vietnam
+  1. score=0.655 doc_id=hoc-bong-rmit-vietnam#5  <-- chứa đáp án
+     ## Các bước nộp hồ sơ xin học bổng  Trước khi nộp hồ sơ, các bạn nên đọc Điều khoản và Điều kiện học bổng.  1....
+  2. score=0.608 doc_id=hoc-bong-rmit-vietnam#2
+     ## Học bổng sau đại học...
+  3. score=0.606 doc_id=chinh-sach-hoc-phi-dac-biet#4
+     ## Cựu sinh viên đã tốt nghiệp chương trình cử nhân hoặc thạc sĩ tại RMIT  Dành cho cựu sinh viên tốt nghiệp c...
+  => điểm Q3: 2/2
+
+=== Q4: Những khoản phí phụ thu bắt buộc gồm những gì và mức phí bao nhiêu?  (filter=None)
+    GOLD: Bảo hiểm y tế dành cho sinh viên quốc tế: 7.400.000 VND/học kỳ; Bảo hiểm y tế bắt buộc: 683.100 VND/năm, áp dụng từ học kỳ 2 năm 2026 — chinh-sach-hoc-phi-rmit, mục Phí phụ thu bắt buộc
+  1. score=0.498 doc_id=chinh-sach-hoc-phi-rmit#16  <-- chứa đáp án
+     ## Phí phụ thu bắt buộc  Dịch vụ: Bảo hiểm y tế dành cho sinh viên quốc tế, Phí VND: 7.400.000/học kỳ, Phí USD...
+  2. score=0.496 doc_id=chinh-sach-hoc-phi-rmit#4
+     ### Khoa Kinh doanh Chương trình: Quản trị Du lịch và Khách sạn, Phạm vi: Toàn chương trình, Tín chỉ: 288, Số ...
+  3. score=0.490 doc_id=chinh-sach-hoc-phi-dac-biet#0
+     # Chính sách học phí đặc biệt  Chính sách học phí đặc biệt có thể áp dụng cho học phí năm 2025....
+  => điểm Q4: 2/2
+
+=== Q5: Có dịch vụ chăm sóc sức khỏe và tâm lý không?  (filter=None)
+    GOLD: Mục Chăm sóc Sức khỏe và Tâm lý: "Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những ngày đầu cho đến khi tốt nghiệp." — ho-tro-sinh-vien-rmit
+  1. score=0.610 doc_id=phuc-loi-nhan-vien-rmit#6
+     ## Dịch vụ y tế tại trường  Tư vấn sức khỏe miễn phí  Điều trị tại chỗ miễn phí với các bệnh cơ bản Dịch vụ tư...
+  2. score=0.560 doc_id=phuc-loi-nhan-vien-rmit#7
+     ## Chương trình hỗ trợ cán bộ giảng viên  Dịch vụ tư vấn tâm lý độc lập, miễn phí và bảo mật cho tất cả cán bộ...
+  3. score=0.542 doc_id=ho-tro-sinh-vien-rmit#2  <-- chứa đáp án
+     ## Chăm sóc Sức khỏe và Tâm lý  Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những...
+  => điểm Q5: 1/2
+
+TỔNG: 7/10 | có chunk chứa đáp án trong top-3: 5/5
+
+################ A/B: heading, KHÔNG chuẩn hóa bảng
+Chiến lược: heading | Embedder: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Filter: BẬT
+Đã nạp 78 chunk từ 7 tài liệu
+
+=== Q1: Học phí toàn bộ chương trình cử nhân Kinh doanh năm 2026 là bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: 1.127.520.000 VND (288 tín chỉ, 24 môn) — chinh-sach-hoc-phi-rmit, Khoa Kinh doanh
+  1. score=0.691 doc_id=chinh-sach-hoc-phi-dac-biet#12
+     ## Chứng chỉ sau đại học  Học viên mới của các chương trình Chứng chỉ sau đại học nhập học vào Học kỳ 2 hoặc 3...
+  2. score=0.678 doc_id=chinh-sach-hoc-phi-dac-biet#8
+     ## Thạc sĩ Quản trị kinh doanh (MBA) Học viên mới của chương trình Thạc sĩ Quản trị kinh doanh (MBA) nhập học ...
+  3. score=0.618 doc_id=chinh-sach-hoc-phi-rmit#9
+     ## Chương trình sau đại học năm 2026...
+  => điểm Q1: 0/2
+
+=== Q2: Sinh viên có anh chị em ruột đang học tại RMIT có được giảm học phí không?  (filter=None)
+    GOLD: Có: được chiết khấu 5% học phí khi bắt đầu nhập học trong năm 2026 (không kết hợp được với các chính sách học phí đặc biệt khác) — chinh-sach-hoc-phi-dac-biet
+  1. score=0.719 doc_id=chinh-sach-hoc-phi-dac-biet#3
+     ## Sinh viên có anh chị em ruột, vợ chồng, cha mẹ hoặc con đang học hoặc đã tốt nghiệp tại RMIT Việt Nam Nếu a...
+  2. score=0.695 doc_id=chinh-sach-hoc-phi-dac-biet#2  <-- chứa đáp án
+     ## Sinh viên có anh chị em ruột, vợ chồng, cha mẹ hoặc con đang học hoặc đã tốt nghiệp tại RMIT Việt Nam Đối v...
+  3. score=0.636 doc_id=chinh-sach-hoc-phi-dac-biet#4
+     ## Cựu sinh viên đã tốt nghiệp chương trình cử nhân hoặc thạc sĩ tại RMIT  Dành cho cựu sinh viên tốt nghiệp c...
+  => điểm Q2: 1/2
+
+=== Q3: Các bước nộp hồ sơ xin học bổng RMIT là gì?  (filter={'category': 'scholarship'})
+    GOLD: 4 bước: chọn học bổng phù hợp, kiểm tra điều kiện, chuẩn bị hồ sơ, nộp hồ sơ — hoc-bong-rmit-vietnam
+  1. score=0.655 doc_id=hoc-bong-rmit-vietnam#5  <-- chứa đáp án
+     ## Các bước nộp hồ sơ xin học bổng  Trước khi nộp hồ sơ, các bạn nên đọc Điều khoản và Điều kiện học bổng.  1....
+  2. score=0.608 doc_id=hoc-bong-rmit-vietnam#2
+     ## Học bổng sau đại học...
+  3. score=0.603 doc_id=hoc-bong-rmit-vietnam#1
+     ## Học bổng đại học...
+  => điểm Q3: 2/2
+
+=== Q4: Những khoản phí phụ thu bắt buộc gồm những gì và mức phí bao nhiêu?  (filter={'category': 'tuition'})
+    GOLD: Bảo hiểm y tế dành cho sinh viên quốc tế: 7.400.000 VND/học kỳ; Bảo hiểm y tế bắt buộc: 683.100 VND/năm, áp dụng từ học kỳ 2 năm 2026 — chinh-sach-hoc-phi-rmit, mục Phí phụ thu bắt buộc
+  1. score=0.495 doc_id=chinh-sach-hoc-phi-rmit#6
+     ### Khoa Khoa học, Kỹ thuật và Công nghệ | Chương trình | Phạm vi | Tín chỉ | Số môn | Phí VND | Phí USD tham ...
+  2. score=0.490 doc_id=chinh-sach-hoc-phi-dac-biet#0
+     # Chính sách học phí đặc biệt  Chính sách học phí đặc biệt có thể áp dụng cho học phí năm 2025....
+  3. score=0.465 doc_id=chinh-sach-hoc-phi-rmit#12  <-- chứa đáp án
+     ## Phí phụ thu bắt buộc  | Dịch vụ | Phí VND | Phí USD tham khảo | |---|---:|---:| | Bảo hiểm y tế dành cho si...
+  => điểm Q4: 1/2
+
+=== Q5: Có dịch vụ chăm sóc sức khỏe và tâm lý không?  (filter={'audience': 'student'})
+    GOLD: Mục Chăm sóc Sức khỏe và Tâm lý: "Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những ngày đầu cho đến khi tốt nghiệp." — ho-tro-sinh-vien-rmit
+  1. score=0.542 doc_id=ho-tro-sinh-vien-rmit#2  <-- chứa đáp án
+     ## Chăm sóc Sức khỏe và Tâm lý  Dịch vụ hỗ trợ và mạng lưới của chúng tôi có thể hỗ trợ cho sinh viên từ những...
+  2. score=0.329 doc_id=chinh-sach-hoc-phi-rmit#12
+     ## Phí phụ thu bắt buộc  | Dịch vụ | Phí VND | Phí USD tham khảo | |---|---:|---:| | Bảo hiểm y tế dành cho si...
+  3. score=0.316 doc_id=ho-tro-sinh-vien-rmit#0
+     # Dịch vụ hỗ trợ sinh viên RMIT  Chúng tôi ở đây để hỗ trợ bạn  Cuộc sống sinh viên đôi khi có thể chứng tỏ nh...
+  => điểm Q5: 2/2
+
+TỔNG: 6/10 | có chunk chứa đáp án trong top-3: 4/5
